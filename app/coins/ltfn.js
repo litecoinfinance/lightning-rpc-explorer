@@ -4,31 +4,31 @@ Decimal8 = Decimal.clone({ precision:8, rounding:8 });
 var currencyUnits = [
 	{
 		type:"native",
-		name:"LTC",
+		name:"LTFN",
 		multiplier:1,
 		default:true,
-		values:["", "ltc", "LTC"],
+		values:["", "ltfn", "LTFN"],
 		decimalPlaces:8
 	},
 	{
 		type:"native",
-		name:"lite",
+		name:"mLTFN",
 		multiplier:1000,
-		values:["lite"],
+		values:["mLTFN"],
 		decimalPlaces:5
 	},
 	{
 		type:"native",
-		name:"photon",
+		name:"uLTFN",
 		multiplier:1000000,
-		values:["photon"],
+		values:["uLTFN"],
 		decimalPlaces:2
 	},
 	{
 		type:"native",
-		name:"litoshi",
+		name:"nLTFN",
 		multiplier:100000000,
-		values:["litoshi", "lit"],
+		values:["nLTFN"],
 		decimalPlaces:0
 	},
 	{
@@ -42,19 +42,19 @@ var currencyUnits = [
 ];
 
 module.exports = {
-	name:"Litecoin",
-	ticker:"LTC",
+	name:"LitecoinFinance",
+	ticker:"LTFN",
 	logoUrl:"/img/logo/ltc.svg",
-	siteTitle:"Litecoin Explorer",
-	nodeTitle:"Litecoin Full Node",
-	nodeUrl:"https://litecoin.org/",
+	siteTitle:"LitecoinFinance Explorer",
+	nodeTitle:"LitecoinFiance Full Node",
+	nodeUrl:"https://ltfn.org/",
 	demoSiteUrl: "https://ltc.chaintools.io",
 	miningPoolsConfigUrls:[
 		"https://raw.githubusercontent.com/hashstream/pools/master/pools.json",
 	],
 	maxBlockWeight: 4000000,
 	currencyUnits:currencyUnits,
-	currencyUnitsByName:{"LTC":currencyUnits[0], "lite":currencyUnits[1], "photon":currencyUnits[2], "litoshi":currencyUnits[3]},
+	currencyUnitsByName:{"LTFN":currencyUnits[0], "mLTFN":currencyUnits[1], "uLTFN":currencyUnits[2], "nLTFN":currencyUnits[3]},
 	baseCurrencyUnit:currencyUnits[3],
 	defaultCurrencyUnit:currencyUnits[0],
 	feeSatoshiPerByteBucketMaxima: [5, 10, 25, 50, 100, 150, 200, 250],
@@ -128,7 +128,7 @@ module.exports = {
 		}
 	],
 	exchangeRateData:{
-		jsonUrl:"https://api.coinmarketcap.com/v1/ticker/Litecoin/",
+		jsonUrl:"https://api.coinmarketcap.com/v1/ticker/Litecoinfinance/",
 		exchangedCurrencyName:"usd",
 		responseBodySelectorFunction:function(responseBody) {
 			if (responseBody[0] && responseBody[0].price_usd) {

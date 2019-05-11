@@ -1,6 +1,6 @@
 var coins = require("./coins.js");
 
-var currentCoin = "BTC";
+var currentCoin = "LTFN";
 
 var credentials = require("./defaultCredentials.js");
 var overwriteCredentials = require("./credentials.js");
@@ -35,20 +35,17 @@ module.exports = {
 	},
 
 	donationAddresses:{
-		coins:["BTC", "LTC"],
+		coins:["LTFN"],
 
-		"BTC":{address:"3NPGpNyLLmVKCEcuipBs7G4KpQJoJXjDGe", urlPrefix:"bitcoin:"},
-		"LTC":{address:"ME4pXiXuWfEi1ANBDo9irUJVcZBhsTx14i", urlPrefix:"litecoin:"}
+		"LTFN":{address:"NKzo8N7QxiALtK5yQRicP9p1bttedC65jv", urlPrefix:"LitecoinFinance:"}
 	},
 
-	blockExplorerUrl:"https://btc.chaintools.io",
+	blockExplorerUrl:"http://lightning.ltfnd.info",
 
 	headerDropdownLinks: {
 		title:"Related Sites",
 		links:[
-			{name: "Bitcoin Explorer", url:"https://btc.chaintools.io", imgUrl:"/img/logo/btc.svg"},
-			{name: "Litecoin Explorer", url:"https://ltc.chaintools.io", imgUrl:"/img/logo/ltc.svg"},
-			{name: "Lightning Explorer", url:"https://lightning.chaintools.io", imgUrl:"/img/logo/lightning.svg"},
+			{name: "LitecoinFinance Explorer", url:"http://lightning.ltfnd.info", imgUrl:"/img/logo/ltc.svg"},
 		]
 	}
 };

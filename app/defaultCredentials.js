@@ -5,8 +5,8 @@ module.exports = {
 	rpc: {
 		host:"127.0.0.1",
 		port:10009,
-		adminMacaroonFilepath: "~/.lnd/admin.macaroon",
-		tlsCertFilepath: "~/.lnd/tls.cert"
+		adminMacaroonFilepath: "/root/.lnd/data/chain/litecoinfinance/mainnet/admin.macaroon",
+		tlsCertFilepath: "/root/.lnd/tls.rt"
 	},
 
 	influxdb:{
